@@ -21,10 +21,15 @@ const App = () => {
     reminder: false
 }
 ])
+// delete 
+const deleteBtn= (id) =>{
+   setTasks(tasks.filter((task)=>task.id !== id))
+  console.log(id)
+}
   return (
     <div className="container">
       <Header />
-      <Tasks  tasks={tasks}/>
+      <Tasks  tasks={tasks} onDelete={deleteBtn}/>
       <h1  ></h1>
     </div>
   )
