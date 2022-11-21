@@ -1,9 +1,14 @@
 
-
-const Tasks = (props) => {
+import Task from "./Task"
+const Tasks = ({tasks}) => {
   return (
-    <div className="task">
-      {props.tasks.map((task)=><h2>{task.text}</h2>)}
+    <div >
+      {/* {tasks.map((task)=><h2>{task.id}</h2>)} */}
+      {tasks.map((task)=>
+      <Task key={task.id}  task={task}/>
+      )}
+
+      
     </div>
   )
 }
