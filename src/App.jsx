@@ -1,6 +1,7 @@
 import Header from "./components/Header"
 import Tasks from "./components/Tasks"
 import { useState } from "react"
+import AddTask from "./components/AddTask"
 const App = () => {
   const [tasks,setTasks]=useState( [ {
     id: 1,
@@ -34,6 +35,7 @@ const toggleReminder =(id) =>{
   return (
     <div className="container">
       <Header />
+      <AddTask/>
       <Tasks  onToggle={toggleReminder} tasks={tasks} onDelete={deleteBtn}/>
       <h1  ></h1>
     </div>
