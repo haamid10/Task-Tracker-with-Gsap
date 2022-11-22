@@ -57,14 +57,16 @@ body {
 }
 
 .task {
-  background: #f4f4f4;
+  background: #c4c1c1;
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 12px;
 }
 
 .task.reminder {
-  border-left: 5px solid green;
+  border-bottom: 3px solid green;
+  
 }
 
 .task h2 {
