@@ -22,6 +22,12 @@ const App = () => {
     reminder: false
 }
 ])
+// add Task
+const addTask =(task)=>{
+  const id= Math.floor(Math.random()*1000)+1
+  const newTask= {id,...task}
+  setTasks([...tasks,newTask])
+}
 // delete 
 const deleteBtn= (id) =>{
    setTasks(tasks.filter((task)=>task.id !== id))
@@ -35,7 +41,7 @@ const toggleReminder =(id) =>{
   return (
     <div className="container">
       <Header />
-      <AddTask/>
+      <AddTask onAdd={addTask}/>
       <Tasks  onToggle={toggleReminder} tasks={tasks} onDelete={deleteBtn}/>
       <h1  ></h1>
     </div>
