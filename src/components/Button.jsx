@@ -4,5 +4,7 @@ const Button = ({text,color}) => {
     <button className="btn " style={{backgroundColor:color}}>{text}</button>
   )
 }
-
+Button.defaultProps ={
+  text: "add"
+}
 export default Button
