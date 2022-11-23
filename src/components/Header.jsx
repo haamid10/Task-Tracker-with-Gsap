@@ -4,7 +4,7 @@ const Header = ({title ,add}) => {
     <header className="header">
       <h2>{title}</h2>
 
-   <Button className="btn" onClick={add}  /> 
+   <Button className="btn" baadhi={add}  /> 
       </header>
 
   )

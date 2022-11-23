@@ -1,7 +1,7 @@
 
-const Button = ({text,color}) => {
+const Button = ({text,color,baadhi}) => {
   return (
-    <button className="btn " style={{backgroundColor:color}}>{text}</button>
+    <button className="btn " onClick={baadhi} style={{backgroundColor:color}}>{text}</button>
   )
 }
 Button.defaultProps ={
