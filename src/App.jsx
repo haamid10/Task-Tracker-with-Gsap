@@ -51,7 +51,7 @@ const toggleReminder =(id) =>{
       
       </aside>
       <main className="main">
-      <Header add={()=>setShowAdd(!showAdd)} app={()=>setShoeRes(!showRes)} show={showAdd}/>
+      <Header add={()=>setShowAdd(!showAdd)} app={()=>setShoeRes(!showRes)} show={showAdd} wash={showRes}/>
       
       {showAdd && <AddTask onAdd={addTask}/>}
       </main>
