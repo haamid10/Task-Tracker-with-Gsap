@@ -13,6 +13,6 @@ const Header = ({title ,add,app}) => {
  
 }
 Header.defaultProps ={
-  title: 'Task Tracker ',
+  title: 'Add your Tasks ',
 }
 export default Header

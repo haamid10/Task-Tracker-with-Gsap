@@ -43,15 +43,22 @@ const toggleReminder =(id) =>{
 }
 
   return (
-    <div className="container">  
+    <div className="container">       
+      <aside className="left"> 
+      <h1>
+        Task Tracker 
+      </h1>
+      
+      </aside>
+      <main className="main">
       <Header add={()=>setShowAdd(!showAdd)} app={()=>setShoeRes(!showRes)}/>
       
       {showAdd && <AddTask onAdd={addTask}/>}
-
-   
+      </main>
+      <aside className="right">
+      {showRes &&<Tasks  onToggle={toggleReminder} tasks={tasks} onDelete={deleteBtn} />}  
       
-      {showRes &&<Tasks  onToggle={toggleReminder} tasks={tasks} onDelete={deleteBtn}/>}
-      <h1></h1>
+      </aside>
     
     </div>
   )
