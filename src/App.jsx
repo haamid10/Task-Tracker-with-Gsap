@@ -44,12 +44,14 @@ const toggleReminder =(id) =>{
   return (
     <div className="container">  
       <Header add={()=>setShowAdd(!showAdd)}/>
+      
       {showAdd && <AddTask onAdd={addTask}/>}
 
    
       
       <Tasks  onToggle={toggleReminder} tasks={tasks} onDelete={deleteBtn}/>
       <h1  ></h1>
+    
     </div>
   )
 }
