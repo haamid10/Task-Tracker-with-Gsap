@@ -1,25 +1,16 @@
 {
-  "tasks":[
+  "tasks": [
     {
       "id": 1,
       "text": "meeting with cabdi",
       "day": "friday",
       "reminder": true
-
     },
     {
       "id": 2,
       "text": "meeting with faarax",
       "day": "friday",
       "reminder": true
-
-    },
-    {
-      "id": 3,
-      "text": "meeting with the president",
-      "day": "friday",
-      "reminder": false
-
     }
   ]
 }

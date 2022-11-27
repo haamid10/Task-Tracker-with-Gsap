@@ -24,18 +24,22 @@ const fetchTasks = async () => {
 
 
 // add Task
-const addTask =(task)=>{
+const addTask = (task)=>{
   const id= Math.floor(Math.random()*1000)+1
   const newTask= {id,...task}
   setTasks([...tasks,newTask])
 }
 // delete 
-const deleteBtn= (id) =>{
+const deleteBtn =async (id) =>{
+  await  fetch(`http://localhost:5000/tasks/${id}`,{
+    method: 'DELETE',
+  })
    setTasks(tasks.filter((task)=>task.id !== id))
   console.log(id)
 }
 // toggle Reminder
-const toggleReminder =(id) =>{
+const toggleReminder = async (id) =>{
+  
   setTasks(tasks.map((task)=>task.id == id ?{...task,reminder:!task.reminder}: task ))
   console.log(id)
 }
