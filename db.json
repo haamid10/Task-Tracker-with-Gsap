@@ -1,29 +1,25 @@
 {
-  "tasks": [
+  "tasks":[
     {
       "id": 1,
-      "text": "Doctors Appointment",
-      "day": "Feb 5th at 2:28pm",
-      " reminder": true,
+      "text": "meeting with cabdi",
+      "day": "friday",
       "reminder": true
+
     },
     {
       "id": 2,
-      "text": "Meeting at the School",
-      "day": "Feb 6th at 3:28pm",
-      " reminder": true
-    },
-    {
+      "text": "meeting with faarax",
       "day": "friday",
-      "reminder": false,
-      "text": "simple Test",
-      "id": 3
+      "reminder": true
+
     },
     {
-      "day": "fridat",
-      "reminder": true,
-      "text": "meet with caadil ahmed ",
-      "id": 4
+      "id": 3,
+      "text": "meeting with the president",
+      "day": "friday",
+      "reminder": false
+
     }
   ]
 }
