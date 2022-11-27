@@ -11,6 +11,12 @@
       "text": "meeting with faarax",
       "day": "friday",
       "reminder": true
+    },
+    {
+      "text": "siuuu",
+      "day": "done",
+      "reminder": false,
+      "id": 3
     }
   ]
 }
