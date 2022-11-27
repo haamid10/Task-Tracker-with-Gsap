@@ -1,7 +1,11 @@
 import Header from "./components/Header"
+import Footer from "./components/Footer"
+import About from "./components/About"
 import Tasks from "./components/Tasks"
 import { useState,useEffect } from "react"
 import AddTask from "./components/AddTask"
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
 const App = () => {
   const [tasks,setTasks]=useState([])
 const [showAdd , setShowAdd]=useState(false)
@@ -64,24 +68,41 @@ const data = await res.json()
 }
 
   return (
-    <div className="container">       
+  <Router>
+    <div className="container">  
+    
+    <route>
+        
       <aside className="left"> 
       <h1>
         Task Tracker 
       </h1>
       
       </aside>
+      </route>
       <main className="main">
       <Header add={()=>setShowAdd(!showAdd)} app={()=>setShoeRes(!showRes)} show={showAdd} wash={showRes}/>
       
       {showAdd && <AddTask onAdd={addTask}/>}
       </main>
       <aside className="right">
+      <Routes>
+          <Route
+            path='/'
+            element={
+              <>
       {showRes &&<Tasks  onToggle={toggleReminder} tasks={tasks} onDelete={deleteBtn} />}  
       
-      </aside>
-    
+
+      </>
+            }
+          />
+          {/* </aside> */}
+      <Route path='/about' element={<About />} />
+        </Routes>
+    <Footer/>
     </div>
+    </Router>
   )
 }
 
