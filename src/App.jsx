@@ -42,9 +42,24 @@ const deleteBtn =async (id) =>{
   console.log(id)
 }
 // toggle Reminder
+const FetchReminder = async (id) => {
+  const res= await fetch(`http://localhost:5000/tasks/${id}`)
+  const data= await res.json()
+  console.log(data)
+  return data
+}
 const toggleReminder = async (id) =>{
+  const getToggle= await FetchReminder(id)
+  const updateToggle={...getToggle,reminder:!getToggle.reminder}
+
+ const res= await fetch(`http://localhost:5000/tasks/${id}`,{
+  method: 'PUT',
+  headers:{"content-type":"application/json"},
+  body:JSON.stringify(updateToggle)
+ })
+const data = await res.json()
   
-  setTasks(tasks.map((task)=>task.id == id ?{...task,reminder:!task.reminder}: task ))
+  setTasks(tasks.map((task)=>task.id == id ?{...task,reminder:data.reminder}: task ))
   console.log(id)
 }
 

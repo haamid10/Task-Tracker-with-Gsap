@@ -15,7 +15,7 @@
     {
       "text": "siuuu",
       "day": "done",
-      "reminder": false,
+      "reminder": true,
       "id": 3
     }
   ]
