@@ -68,7 +68,6 @@ const data = await res.json()
 }
 
   return (
-  <Router>
     <div className="container">  
     
     <route>
@@ -86,23 +85,16 @@ const data = await res.json()
       {showAdd && <AddTask onAdd={addTask}/>}
       </main>
       <aside className="right">
-      <Routes>
-          <Route
-            path='/'
-            element={
-              <>
+     
       {showRes &&<Tasks  onToggle={toggleReminder} tasks={tasks} onDelete={deleteBtn} />}  
       
 
-      </>
-            }
-          />
-          {/* </aside> */}
-      <Route path='/about' element={<About />} />
-        </Routes>
+   
+          </aside>
+     
     <Footer/>
     </div>
-    </Router>
+    
   )
 }
 
